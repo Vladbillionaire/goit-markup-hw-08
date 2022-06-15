@@ -1,0 +1,40 @@
+.hobbies {
+    padding-bottom: 94px;
+}
+
+.hobbies__list {
+    display: flex;
+}
+
+.hobbies__item {
+    position: relative;
+
+    margin-right: 30px;
+    
+    &:last-child {
+    margin-right: 0;
+    }
+}    
+
+.hobbies__thumb {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 370px;
+    height: 70px;
+    background-color: $background-thumb;
+}
+
+.hobbies__thumb-paragraph {
+    font-weight: 700;
+    line-height: 1.14;
+    text-align: center;
+    text-transform: uppercase;
+
+    color: $background-color-white;
+}

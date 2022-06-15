@@ -1,0 +1,37 @@
+// list of scss files:
+// utills scss
+// base scss
+// components simple-selectors
+// layout scss
+
+//! utils scss
+@import './utils/body';
+@import './utils/variables';
+@import './utils/visually-hidden';
+
+//! base scss
+@import './base/animation';
+@import './base/common';
+@import './base/container';
+@import './base/reset';
+@import './base/section';
+
+//! component'
+@import './components/backdrop';
+@import './components/button-close';
+@import './components/buttons';
+@import './components/filter';
+@import './components/form';
+@import './components/logo';
+@import './components/social';
+
+//! layout
+@import './layout/card';
+@import './layout/clients';
+@import './layout/features';
+@import './layout/footer';
+@import './layout/header';
+@import './layout/hero';
+@import './layout/hobbies';
+@import './layout/portfolio';
+@import './layout/team';

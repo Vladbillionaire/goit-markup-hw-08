@@ -1,0 +1,122 @@
+.header {
+    position: fixed;
+    width: 100vw;
+    top: 0;
+    left: 0;
+    z-index: 99;
+
+    background-color: $background-color-white;
+    border-bottom: 1px solid $header-board-color;
+}
+
+.header__container {
+    display: flex;
+    // height: 80.35px;
+    align-items: center;
+}
+
+.navigation {
+    display: flex;
+    align-items: center;
+}
+
+.logo--black {
+    color: $logo-accent-color;
+}
+
+.navigation__logo {
+    padding-top: 24px;
+    padding-bottom: 25px;
+    margin-right: 93px;
+}
+
+.navigation__list {
+    display: flex;
+    align-items: center;
+}
+
+.navigation__item:not(:last-child) {
+    margin-right: 50px;
+}
+
+.navigation__link {
+    display: block;
+    padding-top: 32px;
+    padding-bottom: 32px;
+
+    font-weight: 500;
+    line-height: 1.17;
+    letter-spacing: 0.02em;
+
+    text-decoration: none;
+
+    color: $primary-text-color;
+
+    transition: color;
+    transition-duration: $transition-duration;
+    transition-timing-function: $transition-timing-function;
+
+    &:hover,
+    &:focus {
+        color: $accent-color;
+    }
+
+    &--active {
+        position: relative;
+        color: $accent-color;
+    
+    &::after {
+            position: absolute;
+            content: '';
+            display: block;
+            bottom: -1px;
+    
+            width: 100%;
+            height: 4px;
+            border-radius: 2px;
+            background-color: $accent-color;
+        }
+    }
+}
+
+.header__list {
+    display: flex;
+    align-items: center;
+
+    margin-left: auto;
+}
+
+.header__items {
+    display: flex;
+    align-items: center;
+
+    &:not(:last-child) {
+        margin-right: 30px;
+    }
+}
+
+.header__contact {
+    display: flex;
+    align-items: center;
+    padding-top: 32px;
+    padding-bottom: 32px;
+
+    font-weight: 500;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    text-decoration: none;
+
+    color: $title-text-color;
+
+    transition: color $transition-duration $transition-timing-function;
+
+    &:hover,
+    &:focus {
+        color: $accent-color;
+    }
+} 
+
+.header__icon {
+    fill: currentColor;
+    margin-right: 10px;
+}

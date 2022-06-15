@@ -1,0 +1,31 @@
+.button-close {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 30px;
+    height: 30px;
+    padding: 0;
+    border: $modal-button-border-close;
+    border-radius: 50%;
+    color: $logo-accent-color;
+    background-color: $background-color-white;
+    cursor: pointer;
+
+    transition: color;
+    transition-duration: $transition-duration;
+    transition-timing-function: $transition-timing-function;
+
+    &:hover,
+    &:focus {
+    color: $accent-color;
+    }  
+    
+    &__icon {
+    fill: currentColor;
+    }
+}    
