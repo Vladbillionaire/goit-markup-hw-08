@@ -1,17 +1,17 @@
 .hero {
-    background-color: $background-color-black;
-    text-align: center;
+  background-color: $secondary-background-color;
+  text-align: center;
 
-    padding-top: 118px;
-    padding-bottom: 118px;
-    margin-right: auto;
-    margin-left: auto;
+  padding-top: 118px;
+  padding-bottom: 118px;
+  margin-right: auto;
+  margin-left: auto;
 
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 
-        background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
     url('../images/Hero/hero_sm.jpg');
 
   background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
@@ -57,52 +57,50 @@
     }
   }
 
+  max-width: 480px;
+  height: 400px;
 
-    max-width: 480px;
+  @include mq(tablet) {
+    max-width: 768px;
     height: 400px;
+  }
 
-    @include mq(tablet) {
-        max-width: 768px;
-        height: 400px;
-    }
+  @include mq(desktop) {
+    max-width: 1600px;
+    height: 600px;
 
-    @include mq(desktop) {
-        max-width: 1600px;
-        height: 600px;
-
-        padding-top: 200px;
-        padding-bottom: 200px;
-    }
-}   
-    
+    padding-top: 200px;
+    padding-bottom: 200px;
+  }
+}
 
 .main-title {
-    font-weight: 900;
-    font-size: 26px;
-    line-height: 1.62;
+  font-weight: 900;
+  font-size: 26px;
+  line-height: 1.62;
 
-    letter-spacing: 0.06em;
-    text-align: center;
-    text-transform: uppercase;
+  letter-spacing: 0.06em;
+  text-align: center;
+  text-transform: uppercase;
 
-    @include mq(desktop) {
-        font-size: 44px;
-        line-height: 1.36;
-    }
+  @include mq(desktop) {
+    font-size: 44px;
+    line-height: 1.36;
+  }
 }
 
 .hero__main-title {
-    margin-bottom: 30px;
-    margin-right: auto;
-    margin-left: auto;
-    
-    color: $background-color-white;
-    
-    @include mq(desktop) {
-    width: 360px;
-    }
+  margin-bottom: 30px;
+  margin-right: auto;
+  margin-left: auto;
 
-    @include mq(desktop) {
+  color: $background-color-white;
+
+  @include mq(desktop) {
+    width: 360px;
+  }
+
+  @include mq(desktop) {
     width: 696px;
-    }
+  }
 }
