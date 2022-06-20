@@ -6,13 +6,30 @@
 }
 
 .footer__container {
-    display: flex;
-    align-items: baseline;
-}
+    text-align: center;
 
-.address__container {
+    @include mq(tablet) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: baseline;
+    }
+
+    @include mq(tablet) {
+        display: flex;
+        align-items: baseline;
+    }
+}    
+
+.address__container {    
+    @include mq(mobile-only) {
+        text-align: center;
+    }
+    @include mq(desktop) {
+    text-align: left;
     margin-right: 70px;
-}
+    }
+}    
 
 .footer__logo {
     display: inline-block;
@@ -23,8 +40,18 @@
     color: $background-color-white;
 }
 
+.address {
+    @include mq(not-desktop) {
+        margin-bottom: 60px;
+    }
+}
+
 .address__item:not(:last-child) {
+    margin-bottom: 8px;
+
+    @include mq(desktop) {
     margin-bottom: 9px;
+    }   
 }
 
 .address__link {
@@ -49,7 +76,13 @@
 }
 
 .social__container {
+    @include mq(mobile-only) {
+        margin-bottom: 60px;
+    }
+
+    @include mq(desktop) {
     margin-right: auto;
+    }
 }
 
 .social__caption {
@@ -58,6 +91,14 @@
     text-transform: uppercase;
     color: $background-color-white;
     margin-bottom: 20px;
+
+    @include mq(desktop) {
+    display:flex 
+    }
+
+    @include mq(not-desktop) {
+    text-align: center;
+    }
 }
 
 .social__link--footer {
@@ -68,21 +109,35 @@
 }
 
 .subscribe__caption {
-    display: block;
+    display: flex;
 
     text-transform: uppercase;
     color: $background-color-white;
     margin-bottom: 20px;
+
+    @include mq(tablet-only) {
+        display: block;
+    }
+
+    @include mq(mobile-only) {
+    display: block;
+    }
 }
 
 .subscribe__form {
+    display: block;
+
+    @include mq(desktop) {
     display: flex;
     align-items: center;
+    }
 }
 
 .subscribe__input {
-    width: 358px;
+    display: block;
+    width: 100%;
     min-height: 50px;
+
     padding: 15px 16px;
     margin-right: 12px;
     border-radius: 4px;
@@ -104,6 +159,18 @@
     border-color: $accent-color;
     outline: 0;
     }
+
+    @include mq(tablet) {
+        width: 450px;
+    }
+
+    @include mq(desktop) {
+        width: 358px;
+    }
+
+    @include mq(not-desktop) {
+        margin-bottom: 20px;
+    }
 }
 
 .subscribe__label::placeholder {
@@ -119,4 +186,9 @@
 .subscribe__icon {
     fill: currentColor;
     margin-left: 10px;
+}
+
+.subscribe__form-button {
+    margin-left: auto;
+    margin-right: auto;
 }

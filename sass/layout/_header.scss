@@ -25,21 +25,41 @@
 }
 
 .navigation__logo {
+    @include mq(mobile) {
+    padding-top: 16px;
+    padding-bottom: 16px;
+    }        
+
+    @include mq(tablet) {
+    padding-top: 26px;
+    padding-bottom: 26px;
+    margin-right: 88px;
+    }
+
+    @include mq(desktop) {
     padding-top: 24px;
     padding-bottom: 25px;
     margin-right: 93px;
-}
+    }
+}    
 
 .navigation__list {
+    display: none;
+
+    @include mq(tablet) {
     display: flex;
     align-items: center;
-}
+    }
+}    
 
 .navigation__item:not(:last-child) {
+    @include mq(tablet) {
     margin-right: 50px;
-}
+    }
+}    
 
 .navigation__link {
+    @include mq(tablet) {
     display: block;
     padding-top: 32px;
     padding-bottom: 32px;
@@ -63,6 +83,7 @@
 
     &--active {
         position: relative;
+
         color: $accent-color;
     
     &::after {
@@ -75,32 +96,47 @@
             height: 4px;
             border-radius: 2px;
             background-color: $accent-color;
+            }
         }
     }
-}
+}    
 
 .header__list {
-    display: flex;
-    align-items: center;
+    display: none;
+
+    @include mq(tablet) {
+    display: block;
 
     margin-left: auto;
-}
+    }
+    
+    @include mq(desktop) {
+        display: flex;
+        align-items: center;
+
+        margin-left: auto;
+    }
+}    
 
 .header__items {
+    @include mq(tablet-only) {
+        &:not(:last-child) {
+            margin-bottom: 10px;
+        }
+    }    
+
+    @include mq(desktop) {
     display: flex;
     align-items: center;
 
     &:not(:last-child) {
         margin-right: 30px;
+        }
     }
-}
+}    
 
 .header__contact {
-    display: flex;
-    align-items: center;
-    padding-top: 32px;
-    padding-bottom: 32px;
-
+    @include mq(tablet) {
     font-weight: 500;
     line-height: 1.14;
     letter-spacing: 0.02em;
@@ -114,9 +150,32 @@
     &:focus {
         color: $accent-color;
     }
-} 
+}    
+
+    @include mq(desktop) {
+    display: flex;
+    align-items: center;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    }
+}     
 
 .header__icon {
+    @include mq(tablet) {
     fill: currentColor;
     margin-right: 10px;
+    }
+}
+.header__icon-tablet-email {
+    @include mq(tablet-only) {
+    width: 14px;
+    height: 10px;
+    }
+}    
+
+.header__icon-tablet-phone {
+    @include mq(tablet-only) {
+    width: 10px;
+    height: 14px;
+    }
 }

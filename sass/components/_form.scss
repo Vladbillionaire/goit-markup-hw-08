@@ -122,7 +122,7 @@
 .form__terms-icon {
     margin-right: 8px;
 
-    border: 3px solid $background-color-black;
+    border: 2px solid $background-color-black;
     border-radius: 2px;
 
     transition: $transition-duration $transition-timing-function;
@@ -155,11 +155,16 @@
 
 .form__terms-text {
     font-weight: 400;
-    font-size: 14px;
-    line-height: 1.71;
+    font-size: 12px;
+    line-height: 1.16;
     letter-spacing: 0.03em;
 
     color: $title-text-color;
+
+    @include mq(desktop) {
+        font-size: 14px;
+        line-height: 1.71;
+    }
 }
 
 .form__terms-link {

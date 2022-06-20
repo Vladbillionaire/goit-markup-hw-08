@@ -1,38 +1,108 @@
 .hero {
     background-color: $background-color-black;
     text-align: center;
-    padding-top: 200px;
-    padding-bottom: 200px;
 
-    background-image: linear-gradient(to right,
-            rgba(47, 48, 58, 0.4),
-            rgba(47, 48, 58, 0.4)),
-        url('../images/Hero_image.jpg');
-    max-width: 1600px;
-    height: 600px;
-    margin-left: auto;
+    padding-top: 118px;
+    padding-bottom: 118px;
     margin-right: auto;
+    margin-left: auto;
+
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-}
+
+        background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    url('../images/Hero/hero_sm.jpg');
+
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    -webkit-image-set(url('../images/Hero/hero_sm.webp') 1x);
+
+  @include mq(retina) {
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+      url('../images/Hero/hero_sm@2x.jpg');
+
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+      -webkit-image-set(url('../images/Hero/hero_sm@2x.webp') 2x);
+  }
+
+  @include mq(tablet) {
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+      url('../images/Hero/hero_md.jpg');
+
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+      -webkit-image-set(url('../images/Hero/hero_md.webp') 1x);
+
+    @include mq(retina) {
+      background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+        url('../images/Hero/hero_md@2x.jpg');
+
+      background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+        -webkit-image-set(url('../images/Hero/hero_md@2x.webp') 2x);
+    }
+  }
+
+  @include mq(desktop) {
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+      url('../images/Hero/hero_lg.jpg');
+
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+      -webkit-image-set(url('../images/Hero/hero_lg.webp') 1x);
+
+    @include mq(retina) {
+      background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+        url('../images/Hero/hero_lg@2x.jpg');
+
+      background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+        -webkit-image-set(url('../images/Hero/hero_lg@2x.webp') 2x);
+    }
+  }
+
+
+    max-width: 480px;
+    height: 400px;
+
+    @include mq(tablet) {
+        max-width: 768px;
+        height: 400px;
+    }
+
+    @include mq(desktop) {
+        max-width: 1600px;
+        height: 600px;
+
+        padding-top: 200px;
+        padding-bottom: 200px;
+    }
+}   
+    
 
 .main-title {
-    font-size: 44px;
     font-weight: 900;
-    line-height: 1.36;
+    font-size: 26px;
+    line-height: 1.62;
+
     letter-spacing: 0.06em;
     text-align: center;
     text-transform: uppercase;
 
-    color: $background-color-white;
+    @include mq(desktop) {
+        font-size: 44px;
+        line-height: 1.36;
+    }
 }
 
 .hero__main-title {
     margin-bottom: 30px;
     margin-right: auto;
     margin-left: auto;
-    width: 696px;
-
+    
     color: $background-color-white;
+    
+    @include mq(desktop) {
+    width: 360px;
+    }
+
+    @include mq(desktop) {
+    width: 696px;
+    }
 }

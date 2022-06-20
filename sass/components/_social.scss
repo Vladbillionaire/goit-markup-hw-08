@@ -31,4 +31,6 @@
 
 .social__icon {
     fill: currentColor;
+
+    transition: $transition-duration $transition-timing-function;
 }

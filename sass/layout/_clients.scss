@@ -1,11 +1,19 @@
 .clients__list {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
+    justify-content: center;
+
+    margin: -15px;
 }
 
-.clients__item:not(:last-child) {
-    margin-right: 30px;
+.clients__item {
+    margin: 15px;
 }
+
+// .clients__item:not(:last-child) {
+//     margin-right: 30px;
+// }
 
 .clients__link {
     display: flex;
@@ -13,7 +21,6 @@
     align-items: center;
     justify-content: center;
 
-    width: 170px;
     height: 92px;
 
     border: 1px solid $icon-color;
@@ -28,6 +35,18 @@
     &:hover {
     color: $accent-color;
     border-color: $accent-color;
+    }
+
+    @include mq(mobile) {
+        width: 210px;
+    }
+
+    @include mq(tablet) {
+        width: 226px;
+    }
+
+    @include mq(desktop) {
+        width: 170px;
     }
 }
 
