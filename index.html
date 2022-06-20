@@ -22,7 +22,7 @@
     <link rel="shortcut icon" href="/favicon.ico/favicon-16x16.png" type="image/x-icon" />
   </head>
 
-  <!-- !Header -->
+  <!-- !Menu -->
 
   <body class="body">
     <header class="header">
@@ -32,10 +32,117 @@
             class="logo navigation__logo"
             href="./index.html"
             lang="en"
-            aria-label="Главный логотип"
-          >
-            Web<span class="logo--black">Studio</span>
+            aria-label="Логотип сайта WebStudio"
+            >Web<span class="logo--black">Studio</span>
           </a>
+
+          <button
+            class="menu-button"
+            aria-expanded="false"
+            aria-controls="menu-button"
+            type="button"
+            data-menu-button
+          >
+            <svg
+              class="menu-button__icon"
+              width="40"
+              height="40"
+              aria-label="Переключатель мобильного меню"
+            >
+              <use class="menu-button__icon-menu" href="./images/Icons/sprite.svg#icon-menu"></use>
+              <use
+                class="menu-button__icon-close"
+                href="./images/Icons/sprite.svg#icon-menu-close"
+              ></use>
+            </svg>
+          </button>
+
+          <div class="mobile-menu" id="menu-button" data-menu>
+            <ul class="mobile-menu__list">
+              <li class="mobile-menu__item">
+                <a href="./index.html" class="mobile-menu__link mobile-menu__link--active"
+                  >Студия</a
+                >
+              </li>
+              <li class="mobile-menu__item">
+                <a href="./portfolio.html" class="mobile-menu__link">Портфолио</a>
+              </li>
+              <li class="mobile-menu__item">
+                <a href="#" class="mobile-menu__link">Контакты</a>
+              </li>
+            </ul>
+
+            <ul class="mobile-menu__contacts">
+              <li class="mobile-menu__contacts-item">
+                <a
+                  href="tel:+380961111111"
+                  class="mobile-menu__contacts-link mobile-menu__contacts-link-phone"
+                  >+38 096 111 11 11</a
+                >
+              </li>
+              <li class="mobile-menu__contacts-item">
+                <a
+                  href="mailto:info@devstudio.com"
+                  class="mobile-menu__contacts-link mobile-menu__contacts-link-email"
+                  >info@devstudio.com</a
+                >
+              </li>
+            </ul>
+
+            <ul class="mobile-menu__socials">
+              <li class="mobile-menu__socials-item">
+                <a
+                  class="mobile-menu__socials-link"
+                  href="https://www.instagram.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  lang="en"
+                  aria-label="Instagram"
+                >
+                  Instagram
+                </a>
+              </li>
+              <li class="mobile-menu__socials-item">
+                <a
+                  class="mobile-menu__socials-link"
+                  href="https://twitter.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  lang="en"
+                  aria-label="Twitter"
+                >
+                  Twitter
+                </a>
+              </li>
+              <li class="mobile-menu__socials-item">
+                <a
+                  class="mobile-menu__socials-link"
+                  href="https://facebook.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  lang="en"
+                  aria-label="Facebook"
+                >
+                  Facebook
+                </a>
+              </li>
+              <li class="mobile-menu__socials-item">
+                <a
+                  class="mobile-menu__socials-link"
+                  href="https://linkedin.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  lang="en"
+                  aria-label="Linkedin"
+                >
+                  LinkedIn
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- !Header -->
+
           <ul class="navigation__list">
             <li class="navigation__item">
               <a class="navigation__link navigation__link--active" href="./index.html">Студия</a>
@@ -48,13 +155,10 @@
             </li>
           </ul>
         </nav>
-
-        <!-- !Link -->
-
         <ul class="header__list">
           <li class="header__items">
             <a class="header__contact" href="mailto:info@devstudio.com">
-              <svg class="header__icon" width="16" height="12">
+              <svg class="header__icon header__icon-tablet-email" width="16" height="12">
                 <use href="./images/Icons/sprite.svg#icon-envelope"></use>
               </svg>
               info@devstudio.com
@@ -62,7 +166,7 @@
           </li>
           <li class="header__items">
             <a class="header__contact" href="tel:+380961111111">
-              <svg class="header__icon" width="10" height="16">
+              <svg class="header__icon header__icon-tablet-phone" width="10" height="16">
                 <use href="./images/Icons/sprite.svg#icon-smartphone"></use>
               </svg>
               +38 096 111 11 11
@@ -70,9 +174,91 @@
           </li>
         </ul>
       </div>
+
+      <div class="mobile-menu">
+        <ul class="mobile-menu__list">
+          <li class="mobile-menu__item">
+            <a href="./index.html" class="mobile-menu__link mobile-menu__link--active">Студия</a>
+          </li>
+          <li class="mobile-menu__item">
+            <a href="./portfolio.html" class="mobile-menu__link">Портфолио</a>
+          </li>
+          <li class="mobile-menu__item">
+            <a href="#" class="mobile-menu__link">Контакты</a>
+          </li>
+        </ul>
+
+        <ul class="mobile-menu__contacts">
+          <li class="mobile-menu__contacts-item">
+            <a
+              href="tel:+380961111111"
+              class="mobile-menu__contacts-link mobile-menu__contacts-link-phone"
+              >+38 096 111 11 11</a
+            >
+          </li>
+          <li class="mobile-menu__contacts-item">
+            <a
+              href="mailto:info@devstudio.com"
+              class="mobile-menu__contacts-link mobile-menu__contacts-link-email"
+              >info@devstudio.com</a
+            >
+          </li>
+        </ul>
+
+        <ul class="mobile-menu__socials">
+          <li class="mobile-menu__socials-item">
+            <a
+              class="mobile-menu__socials-link"
+              href="https://www.instagram.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              lang="en"
+              aria-label="Instagram"
+            >
+              Instagram
+            </a>
+          </li>
+          <li class="mobile-menu__socials-item">
+            <a
+              class="mobile-menu__socials-link"
+              href="https://twitter.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              lang="en"
+              aria-label="Twitter"
+            >
+              Twitter
+            </a>
+          </li>
+          <li class="mobile-menu__socials-item">
+            <a
+              class="mobile-menu__socials-link"
+              href="https://facebook.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              lang="en"
+              aria-label="Facebook"
+            >
+              Facebook
+            </a>
+          </li>
+          <li class="mobile-menu__socials-item">
+            <a
+              class="mobile-menu__socials-link"
+              href="https://linkedin.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              lang="en"
+              aria-label="Linkedin"
+            >
+              LinkedIn
+            </a>
+          </li>
+        </ul>
+      </div>
     </header>
 
-    <!-- !Section hero -->
+    <!-- !Hero section -->
 
     <main>
       <section class="hero">
@@ -81,13 +267,11 @@
           <button class="button" type="button" data-modal-open>Заказать услугу</button>
         </div>
 
-        <!-- !Modal window -->
-
         <div class="backdrop is-hidden" data-modal>
           <div class="modal-wrapper">
-            <button class="button-close" data-modal-close type="button" aria-label="Close window">
-              <svg class="button-close__icon" width="11px" height="11px">
-                <use href="./images/Icons/sprite.svg#icon-cross"></use>
+            <button class="button-close" data-modal-close type="button" aria-label="Закрыть окно">
+              <svg class="button-close__icon" width="18px" height="18px">
+                <use href="./images/Icons/sprite.svg#icon-cross-black"></use>
               </svg>
             </button>
 
@@ -97,14 +281,7 @@
               <label class="form__label">
                 <span class="form__input-headline">Имя</span>
                 <span class="form__input-container">
-                  <input
-                    class="form__input"
-                    type="text"
-                    name="name"
-                    minlength="6"
-                    maxlength="14"
-                    autofocus
-                  />
+                  <input class="form__input" type="text" name="name" autofocus />
                   <svg class="form__icon" width="18px" height="18px">
                     <use href="./images/Icons/sprite.svg#icon-person"></use>
                   </svg>
@@ -114,7 +291,7 @@
               <label class="form__label">
                 <span class="form__input-headline">Телефон</span>
                 <span class="form__input-container">
-                  <input class="form__input" type="tel" name="tel" minlength="6" maxlength="14" />
+                  <input class="form__input" type="tel" name="tel" />
                   <svg class="form__icon" width="18px" height="18px">
                     <use href="./images/Icons/sprite.svg#icon-phone"></use>
                   </svg>
@@ -124,13 +301,7 @@
               <label class="form__label">
                 <span class="form__input-headline">Почта</span>
                 <span class="form__input-container">
-                  <input
-                    class="form__input"
-                    type="email"
-                    name="email"
-                    minlength="6"
-                    maxlength="14"
-                  />
+                  <input class="form__input" type="email" name="email" />
                   <svg class="form__icon" width="18px" height="18px">
                     <use href="./images/Icons/sprite.svg#icon-email-black"></use>
                   </svg>
@@ -147,7 +318,7 @@
                 ></textarea>
               </label>
 
-              <label class="form__terms-label">
+              <label class="form__terms-label" for="checkbox">
                 <input class="form__terms-input" type="checkbox" name="terms" id="checkbox" />
                 <svg class="form__terms-icon" width="16px" height="15px">
                   <use href="./images/Icons/sprite.svg#icon-check"></use>
@@ -172,7 +343,8 @@
         <div class="container">
           <h2 class="features__title title visually-hidden">Features</h2>
           <ul class="features__list">
-            <!-- Feature 1 -->
+            <!-- *Feature 1 -->
+
             <li class="features__item">
               <div class="features__icon-container">
                 <svg class="features__icon" width="70" height="70">
@@ -184,7 +356,9 @@
                 Идейные соображения, а также начало повседневной работы по формированию позиции.
               </p>
             </li>
-            <!-- !Feature 2  -->
+
+            <!-- *Feature 2  -->
+
             <li class="features__item">
               <div class="features__icon-container">
                 <svg class="features__icon" width="70" height="70">
@@ -196,7 +370,9 @@
                 Задача организации, в особенности же рамки и место обучения кадров влечет за собой.
               </p>
             </li>
-            <!-- !Feature 3  -->
+
+            <!-- *Feature 3  -->
+
             <li class="features__item">
               <div class="features__icon-container">
                 <svg class="features__icon" width="70" height="70">
@@ -208,7 +384,9 @@
                 Равным образом консультация с широким активом в значительной степени обуславливает.
               </p>
             </li>
-            <!-- !Feature 4 -->
+
+            <!-- *Feature 4 -->
+
             <li class="features__item">
               <div class="features__icon-container">
                 <svg class="features__icon" width="70" height="70">
@@ -231,31 +409,110 @@
           <h2 class="hobbies__title title">Чем мы занимаемся</h2>
           <ul class="hobbies__list">
             <li class="hobbies__item">
-              <img
-                class="hobbies__img"
-                src="images/Squoosh_1.jpg"
-                alt="Написание кода"
-                width="370"
-                height="294"
-              />
+              <picture>
+                <!-- !Images for desktop version 1 -->
+
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="
+                    ./images/Hobbies/what-are-we-doing-img-1_lg.webp    1x,
+                    ./images/Hobbies/what-are-we-doing-img-1_lg@2x.webp 2x
+                  "
+                  type="image/webp"
+                />
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="
+                    ./images/Hobbies/what-are-we-doing-img-1_lg.jpg    1x,
+                    ./images/Hobbies/what-are-we-doing-img-1_lg@2x.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+
+                <!-- !Reliable image 1 -->
+
+                <img
+                  class="hobbies__img"
+                  src="./images/Hobbies/what-are-we-doing-img-1_lg.jpg"
+                  alt="Программирование"
+                  width="370"
+                  height="294"
+                  loading="lazy"
+                />
+              </picture>
               <div class="hobbies__thumb">
                 <p class="hobbies__thumb-paragraph">Десктопные приложения</p>
               </div>
             </li>
             <li class="hobbies__item">
-              <img
-                class="hobbies__img"
-                src="images/Squoosh_2.jpg"
-                alt="Работа с телефоном"
-                width="370"
-                height="294"
-              />
+              <picture>
+                <!-- !Images for desktop version 2 -->
+
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="
+                    ./images/Hobbies/what-are-we-doing-img-2_lg.webp    1x,
+                    ./images/Hobbies/what-are-we-doing-img-2_lg@2x.webp 2x
+                  "
+                  type="image/webp"
+                />
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="
+                    ./images/Hobbies/what-are-we-doing-img-2_lg.jpg    1x,
+                    ./images/Hobbies/what-are-we-doing-img-2_lg@2x.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+
+                <!-- !Reliable image 2 -->
+
+                <img
+                  class="hobbies__img"
+                  src="./images/Hobbies/what-are-we-doing-img-2_lg.jpg"
+                  alt="Мобильные приложения"
+                  width="370"
+                  height="294"
+                  loading="lazy"
+                />
+              </picture>
               <div class="hobbies__thumb">
                 <p class="hobbies__thumb-paragraph">Мобильные приложения</p>
               </div>
             </li>
             <li class="hobbies__item">
-              <img src="images/Squoosh_3.jpg" alt="Работа с планшетом" width="370" height="294" />
+              <picture>
+                <!-- !Images for desktop version 3 -->
+
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="
+                    ./images/Hobbies/what-are-we-doing-img-3_lg.webp    1x,
+                    ./images/Hobbies/what-are-we-doing-img-3_lg@2x.webp 2x
+                  "
+                  type="image/webp"
+                />
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="
+                    ./images/Hobbies/what-are-we-doing-img-3_lg.jpg    1x,
+                    ./images/Hobbies/what-are-we-doing-img-3_lg@2x.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+
+                <!-- !Reliable image 3 -->
+
+                <img
+                  class="hobbies__img"
+                  src="./images/Hobbies/what-are-we-doing-img-3_lg.jpg"
+                  alt="Мобильные игры"
+                  width="370"
+                  height="294"
+                  loading="lazy"
+                />
+              </picture>
+
               <div class="hobbies__thumb">
                 <p class="hobbies__thumb-paragraph">Дизайнерские решения</p>
               </div>
@@ -264,20 +521,83 @@
         </div>
       </section>
 
-      <!-- !Section team -->
+      <!-- !Team section -->
 
       <section class="section team__section">
         <div class="container">
           <h2 class="team__title title">Наша команда</h2>
           <ul class="team__list">
             <li class="team__item">
-              <img
-                class="team__img"
-                src="images/Squoosh_4.jpg"
-                alt="Product Designer"
-                width="270"
-                height="260"
-              />
+              <picture>
+                <!-- !Images for desktop version 1 -->
+
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="
+                    ./images/Team/our-team-img-1_lg.webp    1x,
+                    ./images/Team/our-team-img-1_lg@2x.webp 2x
+                  "
+                  type="image/webp"
+                />
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="
+                    ./images/Team/our-team-img-1_lg.jpg    1x,
+                    ./images/Team/our-team-img-1_lg@2x.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+
+                <!-- !Images for tablet screens 1-->
+
+                <source
+                  media="(min-width: 768px)"
+                  srcset="
+                    ./images/Team/our-team-img-1_md.webp    1x,
+                    ./images/Team/our-team-img-1_md@2x.webp 2x
+                  "
+                  type="image/webp"
+                />
+                <source
+                  media="(min-width: 768px)"
+                  srcset="
+                    ./images/Team/our-team-img-1_md.jpg    1x,
+                    ./images/Team/our-team-img-1_md@2x.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+
+                <!-- !Images for mobile screens 1-->
+
+                <source
+                  media="(max-width: 767px)"
+                  srcset="
+                    ./images/Team/our-team-img-1_sm.webp    1x,
+                    ./images/Team/our-team-img-1_sm@2x.webp 2x
+                  "
+                  type="image/webp"
+                />
+                <source
+                  media="(max-width: 767px)"
+                  srcset="
+                    ./images/Team/our-team-img-1_sm.jpg    1x,
+                    ./images/Team/our-team-img-1_sm@2x.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+
+                <!-- !Reliable image 1 -->
+
+                <img
+                  class="team__img"
+                  src="./images/Team/our-team-img-1_sm.jpg"
+                  alt="Дизайнер продукта Игорь Демьяненко"
+                  width="450"
+                  height="460"
+                  loading="lazy"
+                />
+              </picture>
+
               <div class="team__container">
                 <h3 class="team__subtitle">Игорь Демьяненко</h3>
                 <p class="team__text" lang="en">Product Designer</p>
@@ -287,7 +607,7 @@
                       class="social__link"
                       href="https://www.instagram.com/"
                       target="_blank"
-                      rel="noopener norefferer"
+                      rel="noopener noreferrer"
                       lang="en"
                       aria-label="Instagram"
                     >
@@ -300,41 +620,39 @@
                   <li class="social__item">
                     <a
                       class="social__link"
-                      href="https://www.twitter.com/"
+                      href="https://twitter.com/"
                       target="_blank"
-                      rel="noopener norefferer"
+                      rel="noopener noreferrer"
                       lang="en"
-                      aria-label="Twitter"
+                      aria-label="Instagram"
                     >
-                      <svg class="social__icon" width="20px" height="20px">
+                      <svg class="social__icon" width="20" height="20">
                         <use href="./images/Icons/sprite.svg#icon-twitter-1"></use>
                       </svg>
                     </a>
                   </li>
-
                   <li class="social__item">
                     <a
                       class="social__link"
-                      href="https://www.facebook.com/"
+                      href="https://facebook.com/"
                       target="_blank"
-                      rel="noopener norefferer"
+                      rel="noopener noreferrer"
                       lang="en"
-                      aria-label="Facebook"
+                      aria-label="Instagram"
                     >
                       <svg class="social__icon" width="20" height="20">
                         <use href="./images/Icons/sprite.svg#icon-facebook-1"></use>
                       </svg>
                     </a>
                   </li>
-
                   <li class="social__item">
                     <a
                       class="social__link"
-                      href="https://www.linkedin.com/"
+                      href="https://linkedin.com/"
                       target="_blank"
-                      rel="noopener norefferer"
+                      rel="noopener noreferrer"
                       lang="en"
-                      aria-label="Linkedin"
+                      aria-label="Instagram"
                     >
                       <svg class="social__icon" width="20" height="20">
                         <use href="./images/Icons/sprite.svg#icon-linkedin-1"></use>
@@ -344,15 +662,77 @@
                 </ul>
               </div>
             </li>
-
             <li class="team__item">
-              <img
-                class="team__img"
-                src="images/Squoosh_5.jpg"
-                alt="Frontend Developer"
-                width="270"
-                height="260"
-              />
+              <picture>
+                <!-- !Images for desktop version 2 -->
+
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="
+                    ./images/Team/our-team-img-2_lg.webp    1x,
+                    ./images/Team/our-team-img-2_lg@2x.webp 2x
+                  "
+                  type="image/webp"
+                />
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="
+                    ./images/Team/our-team-img-2_lg.jpg    1x,
+                    ./images/Team/our-team-img-2_lg@2x.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+
+                <!-- !Images for tablet screens 2 -->
+
+                <source
+                  media="(min-width: 768px)"
+                  srcset="
+                    ./images/Team/our-team-img-2_md.webp    1x,
+                    ./images/Team/our-team-img-2_md@2x.webp 2x
+                  "
+                  type="image/webp"
+                />
+                <source
+                  media="(min-width: 768px)"
+                  srcset="
+                    ./images/Team/our-team-img-2_md.jpg    1x,
+                    ./images/Team/our-team-img-2_md@2x.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+
+                <!-- !Images for mobile screens 2 -->
+
+                <source
+                  media="(max-width: 767px)"
+                  srcset="
+                    ./images/Team/our-team-img-2_sm.webp    1x,
+                    ./images/Team/our-team-img-2_sm@2x.webp 2x
+                  "
+                  type="image/webp"
+                />
+                <source
+                  media="(max-width: 767px)"
+                  srcset="
+                    ./images/Team/our-team-img-2_sm.jpg    1x,
+                    ./images/Team/our-team-img-2_sm@2x.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+
+                <!-- !Reliable image 2 -->
+
+                <img
+                  class="team__img"
+                  src="./images/Team/our-team-img-2_sm.jpg"
+                  alt="Frontend разработчик Ольга Репина"
+                  width="450"
+                  height="460"
+                  loading="lazy"
+                />
+              </picture>
+
               <div class="team__container">
                 <h3 class="team__subtitle">Ольга Репина</h3>
                 <p class="team__text" lang="en">Frontend Developer</p>
@@ -362,7 +742,7 @@
                       class="social__link"
                       href="https://www.instagram.com/"
                       target="_blank"
-                      rel="noopener norefferer"
+                      rel="noopener noreferrer"
                       lang="en"
                       aria-label="Instagram"
                     >
@@ -375,41 +755,39 @@
                   <li class="social__item">
                     <a
                       class="social__link"
-                      href="https://www.twitter.com/"
+                      href="https://twitter.com/"
                       target="_blank"
-                      rel="noopener norefferer"
+                      rel="noopener noreferrer"
                       lang="en"
-                      aria-label="Twitter"
+                      aria-label="Instagram"
                     >
                       <svg class="social__icon" width="20" height="20">
                         <use href="./images/Icons/sprite.svg#icon-twitter-1"></use>
                       </svg>
                     </a>
                   </li>
-
                   <li class="social__item">
                     <a
                       class="social__link"
-                      href="https://www.facebook.com/"
+                      href="https://facebook.com/"
                       target="_blank"
-                      rel="noopener norefferer"
+                      rel="noopener noreferrer"
                       lang="en"
-                      aria-label="Facebook"
+                      aria-label="Instagram"
                     >
                       <svg class="social__icon" width="20" height="20">
                         <use href="./images/Icons/sprite.svg#icon-facebook-1"></use>
                       </svg>
                     </a>
                   </li>
-
                   <li class="social__item">
                     <a
                       class="social__link"
-                      href="https://www.linkedin.com/"
+                      href="https://linkedin.com/"
                       target="_blank"
-                      rel="noopener norefferer"
+                      rel="noopener noreferrer"
                       lang="en"
-                      aria-label="Linkedin"
+                      aria-label="Instagram"
                     >
                       <svg class="social__icon" width="20" height="20">
                         <use href="./images/Icons/sprite.svg#icon-linkedin-1"></use>
@@ -420,13 +798,76 @@
               </div>
             </li>
             <li class="team__item">
-              <img
-                class="team__img"
-                src="images/Squoosh_6.jpg"
-                alt="Marketing"
-                width="270"
-                height="260"
-              />
+              <picture>
+                <!-- !Images for desktop version 3 -->
+
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="
+                    ./images/Team/our-team-img-3_lg.webp    1x,
+                    ./images/Team/our-team-img-3_lg@2x.webp 2x
+                  "
+                  type="image/webp"
+                />
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="
+                    ./images/Team/our-team-img-3_lg.jpg    1x,
+                    ./images/Team/our-team-img-3_lg@2x.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+
+                <!-- !Images for tablet screens 3 -->
+
+                <source
+                  media="(min-width: 768px)"
+                  srcset="
+                    ./images/Team/our-team-img-3_md.webp    1x,
+                    ./images/Team/our-team-img-3_md@2x.webp 2x
+                  "
+                  type="image/webp"
+                />
+                <source
+                  media="(min-width: 768px)"
+                  srcset="
+                    ./images/Team/our-team-img-3_md.jpg    1x,
+                    ./images/Team/our-team-img-3_md@2x.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+
+                <!-- !Images for mobile screens 3 -->
+
+                <source
+                  media="(max-width: 767px)"
+                  srcset="
+                    ./images/Team/our-team-img-3_sm.webp    1x,
+                    ./images/Team/our-team-img-3_sm@2x.webp 2x
+                  "
+                  type="image/webp"
+                />
+                <source
+                  media="(max-width: 767px)"
+                  srcset="
+                    ./images/Team/our-team-img-3_sm.jpg    1x,
+                    ./images/Team/our-team-img-3_sm@2x.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+
+                <!-- !Reliable image 3 -->
+
+                <img
+                  class="team__img"
+                  src="./images/Team/our-team-img-3_sm.jpg"
+                  alt="Маркетолог Николай Тарасов"
+                  width="450"
+                  height="460"
+                  loading="lazy"
+                />
+              </picture>
+
               <div class="team__container">
                 <h3 class="team__subtitle">Николай Тарасов</h3>
                 <p class="team__text" lang="en">Marketing</p>
@@ -436,7 +877,7 @@
                       class="social__link"
                       href="https://www.instagram.com/"
                       target="_blank"
-                      rel="noopener norefferer"
+                      rel="noopener noreferrer"
                       lang="en"
                       aria-label="Instagram"
                     >
@@ -449,41 +890,39 @@
                   <li class="social__item">
                     <a
                       class="social__link"
-                      href="https://www.twitter.com/"
+                      href="https://twitter.com/"
                       target="_blank"
-                      rel="noopener norefferer"
+                      rel="noopener noreferrer"
                       lang="en"
-                      aria-label="Twitter"
+                      aria-label="Instagram"
                     >
                       <svg class="social__icon" width="20" height="20">
                         <use href="./images/Icons/sprite.svg#icon-twitter-1"></use>
                       </svg>
                     </a>
                   </li>
-
                   <li class="social__item">
                     <a
                       class="social__link"
-                      href="https://www.facebook.com/"
+                      href="https://facebook.com/"
                       target="_blank"
-                      rel="noopener norefferer"
+                      rel="noopener noreferrer"
                       lang="en"
-                      aria-label="Facebook"
+                      aria-label="Instagram"
                     >
                       <svg class="social__icon" width="20" height="20">
                         <use href="./images/Icons/sprite.svg#icon-facebook-1"></use>
                       </svg>
                     </a>
                   </li>
-
                   <li class="social__item">
                     <a
                       class="social__link"
-                      href="https://www.linkedin.com/"
+                      href="https://linkedin.com/"
                       target="_blank"
-                      rel="noopener norefferer"
+                      rel="noopener noreferrer"
                       lang="en"
-                      aria-label="Linkedin"
+                      aria-label="Instagram"
                     >
                       <svg class="social__icon" width="20" height="20">
                         <use href="./images/Icons/sprite.svg#icon-linkedin-1"></use>
@@ -494,13 +933,76 @@
               </div>
             </li>
             <li class="team__item">
-              <img
-                class="team__img"
-                src="images/Squoosh_7.jpg"
-                alt="UI Designer"
-                width="270"
-                height="260"
-              />
+              <picture>
+                <!-- !Images for desktop version 4 -->
+
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="
+                    ./images/Team/our-team-img-4_lg.webp    1x,
+                    ./images/Team/our-team-img-4_lg@2x.webp 2x
+                  "
+                  type="image/webp"
+                />
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="
+                    ./images/Team/our-team-img-4_lg.jpg    1x,
+                    ./images/Team/our-team-img-4_lg@2x.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+
+                <!-- !Images for tablet screens 4 -->
+
+                <source
+                  media="(min-width: 768px)"
+                  srcset="
+                    ./images/Team/our-team-img-4_md.webp    1x,
+                    ./images/Team/our-team-img-4_md@2x.webp 2x
+                  "
+                  type="image/webp"
+                />
+                <source
+                  media="(min-width: 768px)"
+                  srcset="
+                    ./images/Team/our-team-img-4_md.jpg    1x,
+                    ./images/Team/our-team-img-4_md@2x.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+
+                <!-- !Images for mobile screens 4 -->
+
+                <source
+                  media="(max-width: 767px)"
+                  srcset="
+                    ./images/Team/our-team-img-4_sm.webp    1x,
+                    ./images/Team/our-team-img-4_sm@2x.webp 2x
+                  "
+                  type="image/webp"
+                />
+                <source
+                  media="(max-width: 767px)"
+                  srcset="
+                    ./images/Team/our-team-img-4_sm.jpg    1x,
+                    ./images/Team/our-team-img-4_sm@2x.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+
+                <!-- !Reliable image 4 -->
+
+                <img
+                  class="team__img"
+                  src="./images/Team/our-team-img-4_sm.jpg"
+                  alt="Дизайнер пользовательского интерфейса Михаил Ермаков"
+                  width="450"
+                  height="460"
+                  loading="lazy"
+                />
+              </picture>
+
               <div class="team__container">
                 <h3 class="team__subtitle">Михаил Ермаков</h3>
                 <p class="team__text" lang="en">UI Designer</p>
@@ -510,7 +1012,7 @@
                       class="social__link"
                       href="https://www.instagram.com/"
                       target="_blank"
-                      rel="noopener norefferer"
+                      rel="noopener noreferrer"
                       lang="en"
                       aria-label="Instagram"
                     >
@@ -523,41 +1025,39 @@
                   <li class="social__item">
                     <a
                       class="social__link"
-                      href="https://www.twitter.com/"
+                      href="https://twitter.com/"
                       target="_blank"
-                      rel="noopener norefferer"
+                      rel="noopener noreferrer"
                       lang="en"
-                      aria-label="Twitter"
+                      aria-label="Instagram"
                     >
                       <svg class="social__icon" width="20" height="20">
                         <use href="./images/Icons/sprite.svg#icon-twitter-1"></use>
                       </svg>
                     </a>
                   </li>
-
                   <li class="social__item">
                     <a
                       class="social__link"
-                      href="https://www.facebook.com/"
+                      href="https://facebook.com/"
                       target="_blank"
-                      rel="noopener norefferer"
+                      rel="noopener noreferrer"
                       lang="en"
-                      aria-label="Facebook"
+                      aria-label="Instagram"
                     >
                       <svg class="social__icon" width="20" height="20">
                         <use href="./images/Icons/sprite.svg#icon-facebook-1"></use>
                       </svg>
                     </a>
                   </li>
-
                   <li class="social__item">
                     <a
                       class="social__link"
-                      href="https://www.linkedin.com/"
+                      href="https://linkedin.com/"
                       target="_blank"
-                      rel="noopener norefferer"
+                      rel="noopener noreferrer"
                       lang="en"
-                      aria-label="Linkedin"
+                      aria-label="Instagram"
                     >
                       <svg class="social__icon" width="20" height="20">
                         <use href="./images/Icons/sprite.svg#icon-linkedin-1"></use>
@@ -571,11 +1071,11 @@
         </div>
       </section>
 
-      <!-- !Clients -->
+      <!-- !Clients section -->
 
       <section class="section clients__section">
         <div class="container">
-          <h2 class="second__title title">Постоянные клиенты</h2>
+          <h2 class="clients__title title">Постоянные клиенты</h2>
           <ul class="clients__list">
             <li class="clients__item">
               <a
@@ -584,10 +1084,10 @@
                 target="_blank"
                 rel="noopener noreferrer"
                 lang="en"
-                aria-label="Сlient 1"
+                aria-label="Regular customers"
               >
                 <svg class="clients__icon" width="106" height="60">
-                  <use href="./images/Icons/sprite.svg#icon-Logo"></use>
+                  <use href="./images/Icons/sprite.svg#client-1"></use>
                 </svg>
               </a>
             </li>
@@ -598,10 +1098,10 @@
                 target="_blank"
                 rel="noopener noreferrer"
                 lang="en"
-                aria-label="Сlient 2"
+                aria-label="Regular customers"
               >
                 <svg class="clients__icon" width="106" height="60">
-                  <use href="./images/Icons/sprite.svg#icon-Logo-2"></use>
+                  <use href="./images/Icons/sprite.svg#client-2"></use>
                 </svg>
               </a>
             </li>
@@ -612,10 +1112,10 @@
                 target="_blank"
                 rel="noopener noreferrer"
                 lang="en"
-                aria-label="Сlient 3"
+                aria-label="Regular customers"
               >
                 <svg class="clients__icon" width="106" height="60">
-                  <use href="./images/Icons/sprite.svg#icon-Logo-3"></use>
+                  <use href="./images/Icons/sprite.svg#client-3"></use>
                 </svg>
               </a>
             </li>
@@ -626,10 +1126,10 @@
                 target="_blank"
                 rel="noopener noreferrer"
                 lang="en"
-                aria-label="Сlient 4"
+                aria-label="Regular customers"
               >
                 <svg class="clients__icon" width="106" height="60">
-                  <use href="./images/Icons/sprite.svg#icon-Logo-4"></use>
+                  <use href="./images/Icons/sprite.svg#client-4"></use>
                 </svg>
               </a>
             </li>
@@ -640,10 +1140,10 @@
                 target="_blank"
                 rel="noopener noreferrer"
                 lang="en"
-                aria-label="Сlient 5"
+                aria-label="Regular customers"
               >
                 <svg class="clients__icon" width="106" height="60">
-                  <use href="./images/Icons/sprite.svg#icon-Logo-5"></use>
+                  <use href="./images/Icons/sprite.svg#client-5"></use>
                 </svg>
               </a>
             </li>
@@ -654,10 +1154,10 @@
                 target="_blank"
                 rel="noopener noreferrer"
                 lang="en"
-                aria-label="Сlient 6"
+                aria-label="Regular customers"
               >
                 <svg class="clients__icon" width="106" height="60">
-                  <use href="./images/Icons/sprite.svg#icon-Logo-6"></use>
+                  <use href="./images/Icons/sprite.svg#client-6"></use>
                 </svg>
               </a>
             </li>
@@ -686,8 +1186,8 @@
                 >
               </li>
               <li class="address__item">
-                <a class="address__link address__link--grey" href="mailto:info@example.com"
-                  >info@example.com</a
+                <a class="address__link address__link--grey" href="mailto:info@devstudio.com"
+                  >info@devstudio.com</a
                 >
               </li>
               <li class="address__item">
@@ -698,6 +1198,9 @@
             </ul>
           </address>
         </div>
+
+        <!-- !Footer socials -->
+
         <div class="social__container">
           <strong class="social__caption">Присоединяйтесь</strong>
           <ul class="social">
@@ -770,7 +1273,7 @@
               id="footer-email"
               placeholder="E-mail"
             />
-            <button class="button button--icon" type="submit">
+            <button class="button button--icon subscribe__form-button" type="submit">
               Подписаться
               <svg class="subscribe__icon" width="24" height="24">
                 <use href="./images/Icons/sprite.svg#icon-telegram"></use>
@@ -780,6 +1283,8 @@
         </div>
       </div>
     </footer>
+
     <script src="./js/modal.js"></script>
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>
