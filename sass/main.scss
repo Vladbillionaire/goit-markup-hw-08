@@ -8,6 +8,7 @@
 @import './utils/body';
 @import './utils/variables';
 @import './utils/visually-hidden';
+@import './utils/mixins';
 
 //! base scss
 @import './base/animation';
@@ -16,13 +17,14 @@
 @import './base/reset';
 @import './base/section';
 
-//! component'
+//! components'
 @import './components/backdrop';
 @import './components/button-close';
 @import './components/buttons';
 @import './components/filter';
 @import './components/form';
 @import './components/logo';
+@import './components/mobile-menu';
 @import './components/social';
 
 //! layout
