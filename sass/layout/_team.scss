@@ -19,7 +19,6 @@
 
 .team__item {
     background-color: $background-color-white;
-
     box-shadow: $shadow-color-box-shadow;
     border-radius: 4px 4px 4px 4px;
 
@@ -42,11 +41,11 @@
 }
 
 .team__img {
-    border-top-left-radius: 4px;
-    border-top-right-radius: 4px;
-
     width: 100%;
     height: auto;
+
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
 }
 
 .team__container {
@@ -67,8 +66,9 @@
 }
 
 .team__text {
+    margin-bottom: 16px;
+
     font-size: 16px;
     line-height: 1.19;
     text-align: center;
-    margin-bottom: 16px;
 }

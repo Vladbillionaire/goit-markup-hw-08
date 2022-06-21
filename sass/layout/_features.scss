@@ -1,10 +1,10 @@
 .title {
+    margin-bottom: 50px;
+    
     font-size: 36px;
     font-weight: 700;
     line-height: 1.16;
     text-align: center;
-
-    margin-bottom: 50px;
 
     color: $primary-text-color;
 }
@@ -12,7 +12,6 @@
 .features__list {
     @include mq(tablet) {
         display: flex;
-
         align-items: center;
     }
 
@@ -56,8 +55,9 @@
 
     height: 120px;
     margin-bottom: 30px;
-    border-radius: 4px;
+
     background-color: $third-background-color;
+    border-radius: 4px;
 
     transition: background-color;
     transition-duration: $transition-duration;
@@ -86,11 +86,12 @@
 }
 
 .features__subtitle {
+    margin-bottom: 10px;
+
     font-weight: 700;
     font-size: 14px;
     line-height: 1.14;
     text-transform: uppercase;
-    margin-bottom: 10px;
 
     color: $primary-text-color;
 

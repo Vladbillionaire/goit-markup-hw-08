@@ -2,19 +2,20 @@
     position: absolute;
     top: 8px;
     right: 8px;
+    width: 30px;
 
     display: flex;
-    align-items: center;
     justify-content: center;
-
-    width: 30px;
     height: 30px;
     padding: 0;
-    border: $modal-button-border-close;
-    border-radius: 50%;
+    align-items: center;
+    
+    cursor: pointer;
+
     color: $logo-accent-color;
     background-color: $background-color-white;
-    cursor: pointer;
+    border: $modal-button-border-close;
+    border-radius: 50%;
 
     transition: color;
     transition-duration: $transition-duration;

@@ -28,15 +28,15 @@
 .hobbies__thumb {
     @include mq(desktop) {
     position: absolute;
-    left: 0;
     bottom: 0;
+    left: 0;
 
     display: flex;
+    width: 370px;
+    height: 70px;
     justify-content: center;
     align-items: center;
 
-    width: 370px;
-    height: 70px;
     background-color: $background-thumb;
     }
 }

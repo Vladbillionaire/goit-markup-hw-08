@@ -1,6 +1,7 @@
 .footer {
-    background-color: $background-color-black;
     padding: 60px 0;
+
+    background-color: $background-color-black;
     // padding-top: 60px;
     // padding-bottom: 60px;
 }
@@ -9,13 +10,13 @@
     text-align: center;
 
     @include mq(tablet) {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: baseline;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: baseline;
     }
 
-    @include mq(tablet) {
+    @include mq(desktop) {
         display: flex;
         align-items: baseline;
     }
@@ -26,8 +27,8 @@
         text-align: center;
     }
     @include mq(desktop) {
-    text-align: left;
-    margin-right: 70px;
+        text-align: left;
+        margin-right: 70px;
     }
 }    
 
@@ -55,8 +56,8 @@
 }
 
 .address__link {
-    line-height: 1.71;
     font-style: normal;
+    line-height: 1.71;
     text-decoration: none;
 
     transition: color $transition-duration $transition-timing-function;
@@ -87,10 +88,10 @@
 
 .social__caption {
     display: block;
-
-    text-transform: uppercase;
-    color: $background-color-white;
     margin-bottom: 20px;
+    text-transform: uppercase;
+
+    color: $background-color-white;
 
     @include mq(desktop) {
     display:flex 
@@ -110,17 +111,17 @@
 
 .subscribe__caption {
     display: flex;
-
-    text-transform: uppercase;
-    color: $background-color-white;
     margin-bottom: 20px;
+    text-transform: uppercase;
+
+    color: $background-color-white;
 
     @include mq(tablet-only) {
         display: block;
     }
 
     @include mq(mobile-only) {
-    display: block;
+        display: block;
     }
 }
 
@@ -137,10 +138,9 @@
     display: block;
     width: 100%;
     min-height: 50px;
-
     padding: 15px 16px;
     margin-right: 12px;
-    border-radius: 4px;
+
     cursor: pointer;
     
     font-size: 16px;
@@ -150,6 +150,7 @@
     color: $background-color-white;
     background-color: $background-color-black;
     border: 1px solid $footer-border;
+    border-radius: 4px;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
 
     transition: border $transition-duration $transition-timing-function;
@@ -184,11 +185,17 @@
 }
 
 .subscribe__icon {
-    fill: currentColor;
     margin-left: 10px;
+    fill: currentColor;
 }
 
 .subscribe__form-button {
+    width: 100%;
+
     margin-left: auto;
     margin-right: auto;
-}
+
+  @media screen and (min-width: 250px) {
+    width: 200px;
+    }
+  }

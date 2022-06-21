@@ -1,7 +1,6 @@
 .filter__list {
     display: flex;
     flex-wrap: wrap;
-
     margin-bottom: 40px;
 
     @include mq(tablet) {
@@ -25,19 +24,20 @@
 }
 
 .filter__btn {
-    cursor: pointer;
+    padding: 6px 22px;
+    
     font-family: inherit;
     font-weight: 500;
     font-size: 16px;
     line-height: 1.63;
     text-align: center;
     letter-spacing: 0.03em;
-    
-    border: none;
-    border-radius: 4px;
-    padding: 6px 22px;
+
+    cursor: pointer;
 
     color: $primary-text-color;
+    border: none;
+    border-radius: 4px;
 
     transition: background-color $transition-duration $transition-timing-function,
     color $transition-duration $transition-timing-function,
@@ -45,15 +45,15 @@
 
     &:hover,
     &:focus {
-        background-color: $accent-color;
         color: $background-color-white;
+        background-color: $accent-color;
         box-shadow: $shadow-color-portfolio-bt;
     }
     
     &--active {
-    background-color: $accent-color;
-    color: $background-color-white;
-    box-shadow: $shadow-color-portfolio-bt;
+        color: $background-color-white;   
+        background-color: $accent-color;
+        box-shadow: $shadow-color-portfolio-bt;
     }
 }
 
