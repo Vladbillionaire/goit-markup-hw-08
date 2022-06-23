@@ -109,6 +109,12 @@
     transition: background-color $transition-duration $transition-timing-function;
 }
 
+.subscribe {
+    @include mq(not-desktop) {
+        margin-top: 60px;
+    }
+}
+
 .subscribe__caption {
     display: flex;
     margin-bottom: 20px;
@@ -150,7 +156,6 @@
     color: $background-color-white;
     background-color: $background-color-black;
     border: 1px solid $footer-border;
-    border-radius: 4px;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
 
     transition: border $transition-duration $transition-timing-function;

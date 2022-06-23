@@ -2,7 +2,7 @@
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 99;
+    z-index: 1;
 
     width: 100vw;
 
@@ -106,11 +106,10 @@
 .header__list {
     display: none;
 
-    @include mq(tablet) {
-    display: block;
-
-    margin-left: auto;
-    }
+    @include mq(tablet) { 
+        display: block;
+        margin-left: auto;
+}
     
     @include mq(desktop) {
         display: flex;
@@ -137,11 +136,13 @@
 }    
 
 .header__contact {
+    display: flex;
     @include mq(tablet) {
     font-weight: 500;
     line-height: 1.14;
     letter-spacing: 0.02em;
     text-decoration: none;
+    align-items: center;
 
     color: $title-text-color;
 
@@ -151,7 +152,7 @@
     &:focus {
         color: $accent-color;
     }
-}    
+}   
 
     @include mq(desktop) {
     display: flex;
@@ -160,6 +161,18 @@
     padding-bottom: 32px;
     }
 }     
+
+.header__contact-email {
+    @include mq(tablet-only) {
+        padding-top: 19px;
+    }
+}
+
+.header__contact-phone {
+    @include mq(tablet-only) {
+        padding-bottom: 19px;
+    }
+}
 
 .header__icon {
     @include mq(tablet) {

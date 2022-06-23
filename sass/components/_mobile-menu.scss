@@ -36,6 +36,11 @@
 
     color: $primary-text-color;
 
+    &:hover,
+    &:focus {
+        color: $accent-color;
+    }
+
     &--active {
         color: $accent-color;
     }
@@ -82,6 +87,7 @@
 
 .mobile-menu__socials {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
 }
 
@@ -95,7 +101,7 @@
 
     @media screen and (max-width: 410px) {
     & {
-      font-size: 12px;
+      font-size: 14px;
     }
   }
 }
@@ -105,14 +111,10 @@
     align-items: center;
 }
 
-.mobile-menu__socials-item:not(:last-child)::after {
-    content: '';
-    display: inline-block;
-    width: 2px;
-    height: 22px;
-    margin: 0 10px;
-
-    background-color: rgba(33, 33, 33, 0.2);
+.mobile-menu__socials-item:not(:last-child) {
+    padding-right: 10px;
+    border-right: var(--form-input-border);
+    margin-right: 10px;
 }
 
 .navigation {

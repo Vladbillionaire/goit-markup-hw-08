@@ -593,6 +593,10 @@ textarea {
   color: #212121;
 }
 
+.mobile-menu__link:hover, .mobile-menu__link:focus {
+  color: #2196F3;
+}
+
 .mobile-menu__link--active {
   color: #2196F3;
 }
@@ -642,6 +646,8 @@ textarea {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -657,7 +663,7 @@ textarea {
 
 @media screen and (max-width: 410px) {
   .mobile-menu__socials-link {
-    font-size: 12px;
+    font-size: 14px;
   }
 }
 
@@ -670,13 +676,10 @@ textarea {
           align-items: center;
 }
 
-.mobile-menu__socials-item:not(:last-child)::after {
-  content: '';
-  display: inline-block;
-  width: 2px;
-  height: 22px;
-  margin: 0 10px;
-  background-color: rgba(33, 33, 33, 0.2);
+.mobile-menu__socials-item:not(:last-child) {
+  padding-right: 10px;
+  border-right: var(--form-input-border);
+  margin-right: 10px;
 }
 
 @media screen and (max-width: 767.98px) {
@@ -863,6 +866,7 @@ textarea {
   left: 0;
   width: 100%;
   height: 100%;
+  overflow-y: scroll;
   padding: 63px 24px;
   color: #FFFFFF;
   background-color: rgba(33, 150, 243, 0.9);
@@ -1264,6 +1268,12 @@ textarea {
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+@media screen and (max-width: 1199.98px) {
+  .subscribe {
+    margin-top: 60px;
+  }
+}
+
 .subscribe__caption {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1313,7 +1323,6 @@ textarea {
   color: #FFFFFF;
   background-color: #2F303A;
   border: 1px solid rgba(255, 255, 255, 0.3);
-  border-radius: 4px;
   -webkit-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
           filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   -webkit-transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -1392,7 +1401,7 @@ textarea {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 99;
+  z-index: 1;
   width: 100vw;
   background-color: #FFFFFF;
   border-bottom: 1px solid #ececec;
@@ -1543,12 +1552,21 @@ textarea {
   }
 }
 
+.header__contact {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 @media screen and (min-width: 768px) {
   .header__contact {
     font-weight: 500;
     line-height: 1.14;
     letter-spacing: 0.02em;
     text-decoration: none;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     color: #757575;
     -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -1568,6 +1586,18 @@ textarea {
             align-items: center;
     padding-top: 32px;
     padding-bottom: 32px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199.98px) {
+  .header__contact-email {
+    padding-top: 19px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199.98px) {
+  .header__contact-phone {
+    padding-bottom: 19px;
   }
 }
 
@@ -1599,8 +1629,9 @@ textarea {
   padding-top: 118px;
   padding-bottom: 118px;
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: center center;
   background-size: cover;
+  max-width: 1600px;
   background-color: #2f303a;
   background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../images/Hero/hero_sm.jpg");
   background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/Hero/hero_sm.jpg");
@@ -1643,9 +1674,18 @@ textarea {
   }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (max-width: 767.98px) {
   .hero {
     max-width: 768px;
+    width: 100%;
+    height: 400px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .hero {
+    max-width: 1200px;
+    width: 100%;
     height: 400px;
   }
 }
@@ -1679,13 +1719,9 @@ textarea {
   margin-right: auto;
   margin-bottom: 30px;
   margin-left: auto;
+  width: 360px;
+  max-width: 100%;
   color: #FFFFFF;
-}
-
-@media screen and (min-width: 1200px) {
-  .hero__main-title {
-    width: 360px;
-  }
 }
 
 @media screen and (min-width: 1200px) {
